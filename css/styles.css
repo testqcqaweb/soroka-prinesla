@@ -207,38 +207,39 @@ a:hover {
   color: var(--color-3);
 }
 
-.nav-cta {
+.nav a.nav-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-left: 0.75rem;
-  padding: 5mm 7mm;
-  min-height: calc(1.2em + 10mm);
+  margin-left: 0.85rem;
+  padding: 1.05rem 2.4rem;
+  min-height: 3.75rem;
+  min-width: 12.5rem;
   box-sizing: border-box;
   background: var(--color-3);
   color: #3f3f32 !important;
   text-decoration: none !important;
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  border: 1px solid rgba(255, 232, 214, 0.95);
+  border: 1px solid #fff4ea;
   border-radius: 999px;
   white-space: nowrap;
-  box-shadow: 0 8px 22px rgba(63, 63, 50, 0.18);
+  box-shadow: 0 10px 26px rgba(63, 63, 50, 0.22);
   transition: background 0.25s var(--ease), transform 0.25s var(--ease), color 0.25s var(--ease),
     box-shadow 0.25s var(--ease);
 }
 
-.nav-cta::after {
+.nav a.nav-cta::after {
   display: none !important;
 }
 
-.nav-cta:hover {
+.nav a.nav-cta:hover {
   background: #fff4ea;
   color: var(--accent) !important;
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(63, 63, 50, 0.22);
+  box-shadow: 0 14px 32px rgba(63, 63, 50, 0.28);
 }
 
 .hero {
