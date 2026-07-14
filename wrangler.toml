@@ -1,0 +1,7 @@
+name = "soroka-prinesla-bride"
+compatibility_date = "2025-03-01"
+pages_build_output_dir = "."
+
+# Секреты (wrangler pages secret put TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID):
+# TELEGRAM_BOT_TOKEN — токен бота Ари от @BotFather
+# TELEGRAM_CHAT_ID — ваш chat id (написать боту /start, затем узнать id)

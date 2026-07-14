@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Сорока принесла — церемониальные речи, стихи о молодожёнах и бережная правка поздравлений к свадьбе."
+    />
+    <title>Сорока принесла — речи и стихи на свадьбу</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержанию</a>
+
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="index.html" aria-current="page">
+          <span class="brand-mark">Сорока принесла</span>
+          <span class="brand-sub">Слова для вашего дня</span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="#services">Услуги</a>
+          <a href="brief.html">Бриф</a>
+          <a href="#contacts">Контакты</a>
+          <a class="nav-cta" href="#order">Оставить заявку</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="Главный экран">
+        <div class="hero-media" role="img" aria-label="Свадебная церемония"></div>
+        <div class="hero-content">
+          <p class="hero-brand">Сорока принесла</p>
+          <h1>Речи, стихи и поздравления, которые звучат по-настоящему</h1>
+          <p>
+            Пишу церемониальные тексты под вашу историю — тепло, точно и без шаблонных фраз.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#order">Обсудить текст</a>
+            <a class="btn btn-ghost" href="brief.html">Заполнить бриф</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-head">
+          <span class="section-label">Услуги</span>
+          <h2>Что могу подготовить к свадьбе</h2>
+          <p>
+            От торжественной церемонии до короткого поздравления родственника — текст, который
+            удобно произносить вслух.
+          </p>
+        </div>
+
+        <div class="services">
+          <article class="service">
+            <span class="service-num">01</span>
+            <h3>Церемониальные речи</h3>
+            <p>
+              Речь ведущего или тех, кто проводит церемонию: структура, смысл и эмоция, сшитые под
+              вашу пару и сценарий дня.
+            </p>
+          </article>
+          <article class="service">
+            <span class="service-num">02</span>
+            <h3>Корректировка поздравлений</h3>
+            <p>
+              Аккуратно правлю готовые тексты родителей, свидетелей и гостей: убираю клише, усиливаю
+              личные детали, сохраняю ваш голос.
+            </p>
+          </article>
+          <article class="service">
+            <span class="service-num">03</span>
+            <h3>Стихи о молодожёнах</h3>
+            <p>
+              Авторские стихи под историю знакомства, шутки пары и атмосферу праздника — для
+              церемонии, банкета или семейного сюрприза.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="order">
+        <div class="split">
+          <div class="aside-copy" id="contacts">
+            <div class="section-head">
+              <span class="section-label">Заявка</span>
+              <h2>Расскажите, какой текст нужен</h2>
+              <p>
+                Заявка придёт мне в Telegram. Можно начать с короткой формы или сразу заполнить
+                подробный бриф — так текст получится точнее.
+              </p>
+            </div>
+            <ul class="contact-list">
+              <li>
+                <span>Телефон</span>
+                <a href="tel:+375298312554">+375 29 831-25-54</a>
+              </li>
+              <li>
+                <span>Telegram</span>
+                <a href="https://t.me/sorokaprineslaa" target="_blank" rel="noopener noreferrer"
+                  >@sorokaprineslaa</a
+                >
+              </li>
+              <li>
+                <span>Бриф</span>
+                <a href="brief.html">Опросник для церемонии</a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form-panel" id="lead-form" novalidate>
+            <div class="form-grid two">
+              <div class="field">
+                <label for="name">Имя</label>
+                <input id="name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="contact">Телефон или Telegram</label>
+                <input
+                  id="contact"
+                  name="contact"
+                  type="text"
+                  autocomplete="tel"
+                  placeholder="+375… или @username"
+                  required
+                />
+              </div>
+              <div class="field full">
+                <label for="service">Услуга</label>
+                <select id="service" name="service" required>
+                  <option value="">Выберите…</option>
+                  <option>Церемониальная речь</option>
+                  <option>Корректировка поздравления</option>
+                  <option>Стихи о молодожёнах</option>
+                  <option>Несколько услуг / обсудим</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="date">Дата свадьбы (если известна)</label>
+                <input id="date" name="date" type="date" />
+              </div>
+              <div class="field full">
+                <label for="message">Коротко о задаче</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Кто будет говорить, сколько минут, есть ли черновик, какие акценты важны…"
+                  required
+                ></textarea>
+              </div>
+              <input
+                class="hp"
+                type="text"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+            </div>
+            <p class="form-note">Отправка через Telegram-бота Ари. Обычно отвечаю в тот же день.</p>
+            <button class="btn btn-solid" type="submit">Отправить заявку</button>
+            <p class="form-status" id="lead-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <strong>Сорока принесла</strong>
+          <div>Кирилл Сорокин · тексты для свадебной церемонии</div>
+        </div>
+        <div>
+          <a href="tel:+375298312554">+375 29 831-25-54</a>
+          ·
+          <a href="https://t.me/sorokaprineslaa" target="_blank" rel="noopener noreferrer"
+            >@sorokaprineslaa</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/form.js" type="module"></script>
+  </body>
+</html>

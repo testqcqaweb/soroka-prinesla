@@ -1,0 +1,8 @@
+{
+  "name": "soroka-prinesla-bride",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes wrangler pages dev . --port 8788",
+    "deploy": "npx --yes wrangler pages deploy . --project-name=soroka-prinesla-bride"
+  }
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Бриф для свадебной церемонии — опросник Сорока принесла для подготовки речи и концепции."
+    />
+    <title>Бриф — Сорока принесла</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержанию</a>
+
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">Сорока принесла</span>
+          <span class="brand-sub">Слова для вашего дня</span>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="index.html#services">Услуги</a>
+          <a href="brief.html" aria-current="page">Бриф</a>
+          <a href="index.html#contacts">Контакты</a>
+          <a class="nav-cta" href="index.html#order">Оставить заявку</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="page-hero">
+        <div class="brief-intro">
+          <span class="section-label">Бриф</span>
+          <h1>Бриф для свадебной церемонии</h1>
+          <p>
+            Ответьте на вопросы по возможности подробно — так речь и концепция получатся живыми и
+            вашей. Поля «для неё» и «для него» заполняйте отдельно. Обязательны воспоминания про
+            родителей.
+          </p>
+        </div>
+      </header>
+
+      <section class="section" style="padding-top: 1rem">
+        <form class="form-panel" id="brief-form" novalidate>
+          <div class="brief-block" style="margin-top: 0; padding-top: 0; border-top: 0">
+            <h2>Основное</h2>
+            <p>Фамилия, имя, отчество и даты рождения молодожёнов, профессии и границы вечера.</p>
+            <div class="form-grid two">
+              <div class="field">
+                <label for="bride_fio">Ф.И.О. невесты, дата рождения</label>
+                <input id="bride_fio" name="bride_fio" type="text" required />
+              </div>
+              <div class="field">
+                <label for="groom_fio">Ф.И.О. жениха, дата рождения</label>
+                <input id="groom_fio" name="groom_fio" type="text" required />
+              </div>
+              <div class="field">
+                <label for="bride_job">Род занятий невесты (профессия)</label>
+                <input id="bride_job" name="bride_job" type="text" />
+              </div>
+              <div class="field">
+                <label for="groom_job">Род занятий жениха (профессия)</label>
+                <input id="groom_job" name="groom_job" type="text" />
+              </div>
+              <div class="field full">
+                <label for="avoid">Чего НЕ должно быть на вашем свадебном торжестве</label>
+                <textarea id="avoid" name="avoid" required></textarea>
+              </div>
+              <div class="field">
+                <label for="client_name">Ваше имя для связи</label>
+                <input id="client_name" name="client_name" type="text" required />
+              </div>
+              <div class="field">
+                <label for="client_contact">Телефон или Telegram</label>
+                <input id="client_contact" name="client_contact" type="text" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="brief-block">
+            <h2>Для разработки концепции</h2>
+            <p>
+              Ответьте на следующие вопросы по отдельности — за невесту и за жениха. Можно не
+              заполнять всё сразу, но чем больше деталей, тем точнее текст.
+            </p>
+
+            <div class="person-grid">
+              <div class="person-panel">
+                <h3>Невеста</h3>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="bride_dream">Моя мечта</label>
+                    <textarea id="bride_dream" name="bride_dream"></textarea>
+                  </div>
+                  <div class="field">
+                    <label for="bride_hobby">Моё хобби</label>
+                    <textarea id="bride_hobby" name="bride_hobby"></textarea>
+                  </div>
+                  <div class="field">
+                    <label for="bride_film">Мой любимый фильм / сериал</label>
+                    <input id="bride_film" name="bride_film" type="text" />
+                  </div>
+                  <div class="field">
+                    <label for="bride_song">Моя любимая песня / группа</label>
+                    <input id="bride_song" name="bride_song" type="text" />
+                  </div>
+                  <div class="field">
+                    <label for="bride_childhood"
+                      >Самое яркое воспоминание из детства (с мамой / папой / родственниками —
+                      про родителей обязательно)</label
+                    >
+                    <textarea id="bride_childhood" name="bride_childhood" required></textarea>
+                  </div>
+                  <div class="field">
+                    <label for="bride_personal_dream">Личная мечта</label>
+                    <textarea id="bride_personal_dream" name="bride_personal_dream"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="person-panel">
+                <h3>Жених</h3>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="groom_dream">Моя мечта</label>
+                    <textarea id="groom_dream" name="groom_dream"></textarea>
+                  </div>
+                  <div class="field">
+                    <label for="groom_hobby">Моё хобби</label>
+                    <textarea id="groom_hobby" name="groom_hobby"></textarea>
+                  </div>
+                  <div class="field">
+                    <label for="groom_film">Мой любимый фильм / сериал</label>
+                    <input id="groom_film" name="groom_film" type="text" />
+                  </div>
+                  <div class="field">
+                    <label for="groom_song">Моя любимая песня / группа</label>
+                    <input id="groom_song" name="groom_song" type="text" />
+                  </div>
+                  <div class="field">
+                    <label for="groom_childhood"
+                      >Самое яркое воспоминание из детства (с мамой / папой / родственниками —
+                      про родителей обязательно)</label
+                    >
+                    <textarea id="groom_childhood" name="groom_childhood" required></textarea>
+                  </div>
+                  <div class="field">
+                    <label for="groom_personal_dream">Личная мечта</label>
+                    <textarea id="groom_personal_dream" name="groom_personal_dream"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="brief-block">
+            <h2>О вашей паре</h2>
+            <p>Общая история, встречи и образы друг друга.</p>
+            <div class="form-grid">
+              <div class="field">
+                <label for="shared_dream">Наша общая мечта</label>
+                <textarea id="shared_dream" name="shared_dream"></textarea>
+              </div>
+              <div class="field">
+                <label for="howto_meet">Как вы познакомились</label>
+                <textarea id="howto_meet" name="howto_meet" required></textarea>
+              </div>
+              <div class="field">
+                <label for="pair_memory">Самое яркое воспоминание, связанное с вашей парой</label>
+                <textarea id="pair_memory" name="pair_memory" required></textarea>
+              </div>
+              <div class="form-grid two" style="gap: 1rem">
+                <div class="field">
+                  <label for="describe_bride">Опишите её минимум 3–5 словами</label>
+                  <input id="describe_bride" name="describe_bride" type="text" />
+                </div>
+                <div class="field">
+                  <label for="describe_groom">Опишите его минимум 3–5 словами</label>
+                  <input id="describe_groom" name="describe_groom" type="text" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="first_meeting"
+                  >Опишите вашу первую встречу, первые впечатления друг о друге</label
+                >
+                <textarea id="first_meeting" name="first_meeting"></textarea>
+              </div>
+              <div class="field">
+                <label for="favorite_verse">Ваш любимый стих</label>
+                <textarea id="favorite_verse" name="favorite_verse"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <input
+            class="hp"
+            type="text"
+            name="website"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
+
+          <p class="form-note" style="margin-top: 1.4rem">
+            Бриф уйдёт в Telegram через бота Ари. С уважением, Кирилл Сорокин.
+          </p>
+          <button class="btn btn-solid" type="submit">Отправить бриф</button>
+          <p class="form-status" id="brief-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <strong>Сорока принесла</strong>
+          <div>Бриф для свадебной церемонии</div>
+        </div>
+        <div>
+          <a href="tel:+375298312554">+375 29 831-25-54</a>
+          ·
+          <a href="https://t.me/sorokaprineslaa" target="_blank" rel="noopener noreferrer"
+            >@sorokaprineslaa</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/form.js" type="module"></script>
+  </body>
+</html>
