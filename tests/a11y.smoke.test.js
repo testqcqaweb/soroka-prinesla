@@ -37,6 +37,8 @@ describe("accessibility smoke", () => {
 
     const nav = document.querySelector('nav[aria-label="Основная навигация"]');
     expect(nav).toBeTruthy();
+    expect(document.querySelector(".nav-toggle")).toBeTruthy();
+    expect(document.getElementById("site-nav")).toBeTruthy();
   });
 
   it("brief: required childhood memories and contacts labeled", () => {

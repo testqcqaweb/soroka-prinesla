@@ -19,7 +19,16 @@
           <span class="brand-mark">Сорока принесла</span>
           <span class="brand-sub">Слова для вашего дня</span>
         </a>
-        <nav class="nav" aria-label="Основная навигация">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Открыть меню"
+        >
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="Основная навигация">
           <a href="index.html#services">Услуги</a>
           <a href="index.html#examples">Примеры</a>
           <a href="index.html#speaking">Выступления</a>
@@ -246,6 +255,7 @@
       </div>
     </footer>
 
+    <script src="js/nav.js" type="module"></script>
     <script src="js/form.js" type="module"></script>
   </body>
 </html>

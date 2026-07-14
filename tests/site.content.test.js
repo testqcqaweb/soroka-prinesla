@@ -40,6 +40,8 @@ describe("index.html content & structure", () => {
     expect(html).toContain('id="lead-status"');
     expect(html).toContain('name="website"');
     expect(html).toContain('src="js/form.js"');
+    expect(html).toContain('src="js/nav.js"');
+    expect(html).toContain("nav-toggle");
   });
 
   it("exposes skip link and lang", () => {
@@ -86,6 +88,7 @@ describe("assets exist", () => {
       "css/styles.css",
       "js/form.js",
       "js/form-lib.js",
+      "js/nav.js",
       "worker/lead.js",
       "images/brides-secrets-1.png",
       "images/brides-secrets-2.png",

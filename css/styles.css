@@ -141,7 +141,8 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.9rem 0;
+  padding: 0.85rem 0;
+  position: relative;
 }
 
 .brand {
@@ -149,6 +150,7 @@ a:hover {
   flex-direction: column;
   gap: 0.05rem;
   text-decoration: none;
+  z-index: 2;
 }
 
 .brand-mark {
@@ -168,11 +170,70 @@ a:hover {
   opacity: 1;
 }
 
+.nav-toggle {
+  display: none;
+  appearance: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(255, 232, 214, 0.45);
+  border-radius: 999px;
+  background: rgba(255, 232, 214, 0.18);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.nav-toggle-bars,
+.nav-toggle-bars::before,
+.nav-toggle-bars::after {
+  display: block;
+  width: 1.15rem;
+  height: 2px;
+  background: #fff8f1;
+  border-radius: 2px;
+  transition: transform 0.25s var(--ease), opacity 0.2s ease;
+}
+
+.nav-toggle-bars {
+  position: relative;
+}
+
+.nav-toggle-bars::before,
+.nav-toggle-bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle-bars::before {
+  top: -6px;
+}
+
+.nav-toggle-bars::after {
+  top: 6px;
+}
+
+.site-header.is-open .nav-toggle-bars {
+  background: transparent;
+}
+
+.site-header.is-open .nav-toggle-bars::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.site-header.is-open .nav-toggle-bars::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 .nav {
   display: flex;
   align-items: center;
   gap: 0.5rem 1.35rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-end;
 }
 
@@ -240,6 +301,64 @@ a:hover {
   color: var(--accent) !important;
   transform: translateY(-2px);
   box-shadow: 0 14px 32px rgba(63, 63, 50, 0.28);
+}
+
+@media (max-width: 900px) {
+  .nav-wrap {
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.75rem 0;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    display: none;
+    width: 100%;
+    order: 3;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 0.85rem;
+    padding: 0.35rem 0 0.6rem;
+    border-top: 1px solid rgba(255, 232, 214, 0.28);
+  }
+
+  .site-header.is-open .nav {
+    display: flex;
+  }
+
+  .nav a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 2.85rem;
+    padding: 0.7rem 0.15rem;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 232, 214, 0.16);
+  }
+
+  .nav a::after {
+    display: none;
+  }
+
+  .nav a.nav-cta {
+    width: 100%;
+    margin: 0.85rem 0 0;
+    min-width: 0;
+    min-height: 3.35rem;
+    padding: 0.95rem 1.4rem;
+    font-size: 1rem;
+    border-bottom: 0;
+  }
+
+  .nav a.nav-cta:hover {
+    transform: none;
+  }
 }
 
 .hero {
