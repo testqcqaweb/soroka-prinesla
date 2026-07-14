@@ -479,6 +479,46 @@ a:hover {
   font-size: 0.98rem;
 }
 
+.speaking-gallery {
+  display: grid;
+  gap: 0.9rem;
+  animation: rise 1s var(--ease) both;
+}
+
+@media (min-width: 760px) {
+  .speaking-gallery {
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    min-height: 560px;
+  }
+
+  .speaking-shot--lead {
+    grid-row: 1 / span 2;
+  }
+}
+
+.speaking-shot {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--feature-card-border);
+  background: #2a2420;
+  min-height: 260px;
+}
+
+.speaking-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.8s var(--ease);
+}
+
+.speaking-shot:hover img {
+  transform: scale(1.04);
+}
+
 .split {
   display: grid;
   gap: 2rem;
