@@ -65,6 +65,7 @@ describe("brief.html questionnaire", () => {
       "shared_dream",
       "favorite_verse",
       "first_meeting",
+      "client_phone",
     ];
 
     for (const snip of requiredSnippets) {

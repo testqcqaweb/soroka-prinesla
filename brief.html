@@ -74,8 +74,25 @@
                 <input id="client_name" name="client_name" type="text" required />
               </div>
               <div class="field">
-                <label for="client_contact">Телефон или Telegram</label>
-                <input id="client_contact" name="client_contact" type="text" required />
+                <label for="client_phone">Номер телефона</label>
+                <input
+                  id="client_phone"
+                  name="client_phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="+375…"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="client_contact">Telegram</label>
+                <input
+                  id="client_contact"
+                  name="client_contact"
+                  type="text"
+                  placeholder="@username"
+                  required
+                />
               </div>
             </div>
           </div>
