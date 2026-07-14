@@ -1,0 +1,7 @@
+name = "soroka-prinesla-lead"
+main = "worker/lead.js"
+compatibility_date = "2025-03-01"
+
+# Секреты:
+# npx wrangler secret put TELEGRAM_BOT_TOKEN
+# npx wrangler secret put TELEGRAM_CHAT_ID

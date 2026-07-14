@@ -32,6 +32,11 @@ const LABELS = {
   favorite_verse: "Любимый стих",
 };
 
+/** URL воркера, который шлёт заявки в Telegram. После деплоя подставьте свой. */
+const LEAD_API_URL =
+  window.SOROKA_LEAD_API_URL ||
+  "https://soroka-prinesla-lead.testqcqaweb.workers.dev";
+
 function formToObject(form) {
   const data = Object.fromEntries(new FormData(form).entries());
   delete data.website;
@@ -57,30 +62,34 @@ function escapeHtml(value) {
 }
 
 async function submitToApi(payload) {
-  const response = await fetch("/api/lead", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
-  });
+  const endpoints = [LEAD_API_URL, "/api/lead"].filter(Boolean);
+  let lastError = new Error("Не удалось отправить заявку.");
 
-  let body = {};
-  try {
-    body = await response.json();
-  } catch {
-    body = {};
+  for (const url of endpoints) {
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      let body = {};
+      try {
+        body = await response.json();
+      } catch {
+        body = {};
+      }
+
+      if (response.ok) return body;
+      lastError = new Error(
+        body.error || "Не удалось отправить. Напишите напрямую @sorokaprineslaa.",
+      );
+    } catch (error) {
+      lastError = error instanceof Error ? error : lastError;
+    }
   }
 
-  if (!response.ok) {
-    throw new Error(body.error || "Не удалось отправить. Попробуйте ещё раз или напишите в Telegram.");
-  }
-
-  return body;
-}
-
-function openTelegramFallback(text) {
-  const plain = text.replace(/<\/?b>/g, "");
-  const url = `https://t.me/sorokaprineslaa?text=${encodeURIComponent(plain.slice(0, 3500))}`;
-  window.open(url, "_blank", "noopener,noreferrer");
+  throw lastError;
 }
 
 function bindForm(formId, statusId, title) {
@@ -111,19 +120,14 @@ function bindForm(formId, statusId, title) {
 
     try {
       await submitToApi({ title, data, text });
-      status.textContent = "Готово! Заявка уже в Telegram.";
+      status.textContent = "Готово! Заявка уже у меня в Telegram.";
       status.classList.add("ok");
       form.reset();
     } catch (error) {
-      try {
-        openTelegramFallback(text);
-        status.textContent =
-          "Откройте Telegram и нажмите «Отправить» — так заявка точно дойдёт. Если вкладка не открылась, напишите @sorokaprineslaa.";
-        status.classList.add("ok");
-      } catch {
-        status.textContent = error.message;
-        status.classList.add("err");
-      }
+      status.textContent =
+        error.message ||
+        "Не получилось отправить автоматически. Напишите @sorokaprineslaa или наберите +375 29 831-25-54.";
+      status.classList.add("err");
     } finally {
       if (button) button.disabled = false;
     }
