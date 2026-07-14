@@ -479,6 +479,96 @@ a:hover {
   font-size: 0.98rem;
 }
 
+.examples {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .examples {
+    grid-template-columns: 1.15fr 0.95fr;
+    grid-template-rows: auto auto;
+    gap: 1.35rem 1.5rem;
+  }
+
+  .examples .example:first-child {
+    grid-row: 1 / span 2;
+  }
+}
+
+.example {
+  padding: 1.4rem 1.35rem 1.55rem;
+  background: var(--feature-card-bg);
+  border: 1px solid var(--feature-card-border);
+  box-shadow: var(--shadow);
+  animation: rise 0.9s var(--ease) both;
+}
+
+.example:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.example:nth-child(3) {
+  animation-delay: 0.14s;
+}
+
+.example-kind {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.example h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 2.8vw, 2rem);
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+  color: var(--feature-title-text-color);
+  line-height: 1.15;
+}
+
+.example-meta {
+  margin: 0 0 1.1rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.poem {
+  font-family: var(--font-display);
+  font-size: clamp(1.12rem, 2.1vw, 1.32rem);
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.poem p {
+  margin: 0 0 1.15rem;
+}
+
+.poem p:last-child {
+  margin-bottom: 0;
+}
+
+.example-quote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.example-quote p {
+  margin: 0 0 0.95rem;
+}
+
+.example-quote p:last-child {
+  margin-bottom: 0;
+}
+
 .speaking-gallery {
   display: grid;
   gap: 0.9rem;
