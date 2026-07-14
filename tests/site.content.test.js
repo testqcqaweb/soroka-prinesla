@@ -113,8 +113,9 @@ describe("palette & contrast safety net", () => {
   });
 
   it("gives CTA pill generous padding", () => {
-    expect(css).toMatch(/\.nav-cta\s*\{[^}]*padding:\s*1\.15rem 2\.6rem/s);
+    expect(css).toMatch(/\.nav-cta\s*\{[^}]*padding:\s*5mm 7mm/s);
     expect(css).toMatch(/\.nav-cta\s*\{[^}]*border-radius:\s*999px/s);
+    expect(css).toMatch(/\.nav-cta\s*\{[^}]*background:\s*var\(--color-3\)/s);
   });
 });
 

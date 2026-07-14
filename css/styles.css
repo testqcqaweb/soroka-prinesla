@@ -211,19 +211,23 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-left: 0.55rem;
-  padding: 1.15rem 2.6rem;
-  min-height: 3.4rem;
-  background: var(--header-badge-bg);
-  color: var(--color-3) !important;
+  margin-left: 0.75rem;
+  padding: 5mm 7mm;
+  min-height: calc(1.2em + 10mm);
+  box-sizing: border-box;
+  background: var(--color-3);
+  color: #3f3f32 !important;
   text-decoration: none !important;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 700;
-  letter-spacing: 0.01em;
-  border: 1px solid rgba(255, 232, 214, 0.55);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  border: 1px solid rgba(255, 232, 214, 0.95);
   border-radius: 999px;
   white-space: nowrap;
-  transition: background 0.25s var(--ease), transform 0.25s var(--ease), color 0.25s var(--ease);
+  box-shadow: 0 8px 22px rgba(63, 63, 50, 0.18);
+  transition: background 0.25s var(--ease), transform 0.25s var(--ease), color 0.25s var(--ease),
+    box-shadow 0.25s var(--ease);
 }
 
 .nav-cta::after {
@@ -231,9 +235,10 @@ a:hover {
 }
 
 .nav-cta:hover {
-  background: var(--color-3);
-  color: #3f3f32 !important;
-  transform: translateY(-1px);
+  background: #fff4ea;
+  color: var(--accent) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(63, 63, 50, 0.22);
 }
 
 .hero {
