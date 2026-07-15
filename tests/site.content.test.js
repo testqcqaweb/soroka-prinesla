@@ -141,10 +141,12 @@ describe("favicon and 404", () => {
     expect(existsSync(resolve(root, "images/favicon-512.png"))).toBe(true);
   });
 
-  it("has festive ribbon-themed 404 page", () => {
+  it("has festive lace-themed 404 page", () => {
     const html = read("404.html");
     expect(html).toContain("404");
-    expect(html).toContain("nf-ribbon");
+    expect(html).toContain("nf-lace");
+    expect(html).toContain("nf-doily");
+    expect(html).not.toContain("nf-ribbon");
     expect(html).toContain("На главную");
     expect(html).toContain("Заполнить бриф");
     expect(existsSync(resolve(root, "css/not-found.css"))).toBe(true);
