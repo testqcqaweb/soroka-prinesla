@@ -151,6 +151,7 @@ describe("favicon and 404", () => {
   });
 });
 
+describe("production wiring", () => {
   const formLib = read("js/form-lib.js");
   const workerToml = read("wrangler.lead.toml");
 
