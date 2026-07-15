@@ -27,6 +27,13 @@ describe("index.html content & structure", () => {
     expect(html).toContain("Момент обетов");
   });
 
+  it("has book section for poetry collection", () => {
+    expect(html).toContain('id="book"');
+    expect(html).toContain("Стих");
+    expect(html).toContain("Есть");
+    expect(html).toContain("images/stih-est.png");
+  });
+
   it("has speaking section with all BRIDE'S SECRETS photos", () => {
     expect(html).toContain("BRIDE'S SECRETS");
     expect(html).toContain('id="speaking"');
@@ -93,6 +100,7 @@ describe("assets exist", () => {
       "images/brides-secrets-1.png",
       "images/brides-secrets-2.png",
       "images/brides-secrets-3.png",
+      "images/stih-est.png",
     ];
 
     for (const file of files) {

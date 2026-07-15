@@ -694,6 +694,54 @@ a:hover {
   margin-bottom: 0;
 }
 
+.book-split {
+  display: grid;
+  gap: 1.6rem;
+  align-items: center;
+  animation: rise 0.9s var(--ease) both;
+}
+
+@media (min-width: 820px) {
+  .book-split {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2.4rem;
+  }
+}
+
+.book-copy {
+  max-width: 34rem;
+  margin-bottom: 0;
+}
+
+.book-card {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--feature-card-border);
+  background: #1c1714;
+  box-shadow: var(--shadow);
+  max-width: 28rem;
+  justify-self: center;
+}
+
+@media (min-width: 820px) {
+  .book-card {
+    justify-self: end;
+    max-width: none;
+  }
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease);
+}
+
+.book-card:hover img {
+  transform: scale(1.03);
+}
+
 .speaking-gallery {
   display: grid;
   gap: 0.9rem;
