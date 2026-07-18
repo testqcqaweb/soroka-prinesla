@@ -719,22 +719,24 @@ a:hover {
   border: 1px solid var(--feature-card-border);
   background: #1c1714;
   box-shadow: var(--shadow);
-  max-width: 28rem;
+  width: min(13.5rem, 72%);
+  aspect-ratio: 3 / 4;
   justify-self: center;
 }
 
 @media (min-width: 820px) {
   .book-card {
     justify-self: end;
-    max-width: none;
+    width: min(14.5rem, 100%);
   }
 }
 
 .book-card img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center 45%;
   transition: transform 0.8s var(--ease);
 }
 
@@ -744,20 +746,18 @@ a:hover {
 
 .speaking-gallery {
   display: grid;
-  gap: 0.9rem;
+  gap: 0.7rem;
+  width: min(34rem, 100%);
+  margin-inline: auto;
+  justify-items: center;
   animation: rise 1s var(--ease) both;
 }
 
-@media (min-width: 760px) {
+@media (min-width: 700px) {
   .speaking-gallery {
-    grid-template-columns: 1.15fr 0.85fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1rem;
-    min-height: 560px;
-  }
-
-  .speaking-shot--lead {
-    grid-row: 1 / span 2;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    justify-items: stretch;
   }
 }
 
@@ -766,16 +766,31 @@ a:hover {
   overflow: hidden;
   border: 1px solid var(--feature-card-border);
   background: #2a2420;
-  min-height: 260px;
+  aspect-ratio: 3 / 4;
+  width: min(12.5rem, 100%);
+}
+
+@media (min-width: 700px) {
+  .speaking-shot {
+    width: auto;
+  }
 }
 
 .speaking-shot img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 22%;
   display: block;
   transition: transform 0.8s var(--ease);
+}
+
+.speaking-shot:nth-child(2) img {
+  object-position: center 42%;
+}
+
+.speaking-shot:nth-child(3) img {
+  object-position: center 28%;
 }
 
 .speaking-shot:hover img {
