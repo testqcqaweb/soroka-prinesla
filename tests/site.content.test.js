@@ -22,10 +22,8 @@ describe("index.html content & structure", () => {
 
   it("publishes three packages with prices, term and prepayment", () => {
     expect(html).toContain('id="packages"');
-    expect(html).toContain("12&nbsp;000");
-    expect(html).toContain("18&nbsp;000");
-    expect(html).toContain("35&nbsp;000");
-    expect(html).toContain("400&nbsp;Br");
+    expect(html).toContain("250&nbsp;Br");
+    expect(html).toContain("350&nbsp;Br");
     expect(html).toContain("600&nbsp;Br");
     expect(html).toContain("Пакет «День»");
     expect(html).toContain("5–10 дней");
@@ -37,7 +35,8 @@ describe("index.html content & structure", () => {
     expect(html).toContain('id="examples"');
     expect(html).toContain("Дом у озера");
     expect(html).toContain("колеса обозрения");
-    expect(html).toContain("Момент обетов");
+    expect(html).toContain("Даша и Илья");
+    expect(html).toContain("печёную картошку");
   });
 
   it("has book section for poetry collection", () => {

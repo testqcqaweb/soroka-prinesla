@@ -12,11 +12,11 @@
 - https://github.com/testqcqaweb/Soroka_prinesla — портфолио
 - https://github.com/testqcqaweb/travelvlog — заготовка
 
-Приватные:
+Приватные (уже на GitHub):
 
-- `gagarin-evening`
-- `omarchy-non-alco`
-- `omarchy-pomodoro`
+- https://github.com/testqcqaweb/gagarin-evening
+- https://github.com/testqcqaweb/omarchy-non-alco
+- https://github.com/testqcqaweb/omarchy-pomodoro
 
 Не заливаем: чужой `kenhara.encyclopedic`, стоковые clock/background/workspaces, пустые `new_age` и `angelina+kirill+whiskey`.
 
