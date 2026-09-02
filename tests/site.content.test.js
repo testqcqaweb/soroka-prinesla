@@ -20,6 +20,19 @@ describe("index.html content & structure", () => {
     expect(html).toContain("Стихи о молодожёнах");
   });
 
+  it("publishes three packages with prices, term and prepayment", () => {
+    expect(html).toContain('id="packages"');
+    expect(html).toContain("12&nbsp;000");
+    expect(html).toContain("18&nbsp;000");
+    expect(html).toContain("35&nbsp;000");
+    expect(html).toContain("400&nbsp;Br");
+    expect(html).toContain("600&nbsp;Br");
+    expect(html).toContain("Пакет «День»");
+    expect(html).toContain("5–10 дней");
+    expect(html).toContain("Предоплата 50%");
+    expect(html).toContain("partners.html");
+  });
+
   it("has examples section with the lake house poem", () => {
     expect(html).toContain('id="examples"');
     expect(html).toContain("Дом у озера");
@@ -97,6 +110,8 @@ describe("assets exist", () => {
       "js/form-lib.js",
       "js/nav.js",
       "worker/lead.js",
+      "partners.html",
+      "docs/hosts-outreach.md",
       "images/brides-secrets-1.png",
       "images/brides-secrets-2.png",
       "images/brides-secrets-3.png",

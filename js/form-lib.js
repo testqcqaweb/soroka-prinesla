@@ -1,7 +1,7 @@
 export const LABELS = {
   name: "Имя",
   contact: "Контакт",
-  service: "Услуга",
+  service: "Пакет",
   date: "Дата свадьбы",
   message: "Сообщение",
   client_name: "Имя для связи",
@@ -132,7 +132,8 @@ export function bindForm(formId, statusId, title, options = {}) {
           leadApiUrl: options.leadApiUrl,
         },
       );
-      status.textContent = "Готово! Заявка уже у меня в Telegram.";
+      status.textContent =
+        "Готово! Заявка уже у меня в Telegram. Дальше пришлю реквизиты предоплаты 50% — после оплаты пишу текст 5–10 дней.";
       status.classList.add("ok");
       form.reset();
     } catch (error) {

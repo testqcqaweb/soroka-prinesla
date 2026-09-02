@@ -11,7 +11,7 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="images/favicon-512.png" type="image/png" sizes="512x512" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
-    <link rel="stylesheet" href="css/styles.css?v=20260718b" />
+    <link rel="stylesheet" href="css/styles.css?v=20260902a" />
   </head>
   <body>
     <a class="skip-link" href="#main">К содержанию</a>
@@ -33,6 +33,7 @@
         </button>
         <nav class="nav" id="site-nav" aria-label="Основная навигация">
           <a href="#services">Услуги</a>
+          <a href="#packages">Цены</a>
           <a href="#examples">Примеры</a>
           <a href="#book">Сборник</a>
           <a href="#speaking">Выступления</a>
@@ -65,7 +66,7 @@
           <h2>Что могу подготовить к свадьбе</h2>
           <p>
             От торжественной церемонии до короткого поздравления родственника — текст, который
-            удобно произносить вслух.
+            удобно произносить вслух. Сроки, правки и оплата — в блоке цен ниже.
           </p>
         </div>
 
@@ -94,6 +95,64 @@
               церемонии, банкета или семейного сюрприза.
             </p>
           </article>
+        </div>
+      </section>
+
+      <section class="section" id="packages">
+        <div class="section-head">
+          <span class="section-label">Цены</span>
+          <h2>Три пакета — без торга вслепую</h2>
+          <p>
+            Фиксированная стоимость, одна правка в цене, срок 5–10 дней после брифа и предоплаты.
+            Срочность быстрее 5 дней — плюс 30%. Это первый открытый сезон: цена как у изданного
+            поэта, без накрутки «за бренд агентства».
+          </p>
+        </div>
+
+        <div class="packages">
+          <article class="package">
+            <span class="package-name">Стих</span>
+            <h3>Стихи о паре</h3>
+            <p class="package-price">12&nbsp;000&nbsp;₽ <span>· 400&nbsp;Br</span></p>
+            <ul>
+              <li>Авторский текст под вашу историю, 3–5 строф</li>
+              <li>Удобно читать вслух на церемонии или банкете</li>
+              <li>Одна правка по смыслу и деталям</li>
+            </ul>
+            <a class="btn btn-ghost" href="#order">Заказать стих</a>
+          </article>
+          <article class="package package-featured">
+            <span class="package-name">Речь</span>
+            <h3>Церемониальная речь</h3>
+            <p class="package-price">18&nbsp;000&nbsp;₽ <span>· 600&nbsp;Br</span></p>
+            <ul>
+              <li>Речь ведущего или того, кто проводит обеты</li>
+              <li>Структура под сценарий дня, 4–7 минут звучания</li>
+              <li>Одна правка; инструкция, как произносить</li>
+            </ul>
+            <a class="btn btn-primary" href="#order">Заказать речь</a>
+          </article>
+          <article class="package">
+            <span class="package-name">День</span>
+            <h3>Пакет «День»</h3>
+            <p class="package-price">35&nbsp;000&nbsp;₽ <span>· 1&nbsp;170&nbsp;Br</span></p>
+            <ul>
+              <li>Церемониальная речь + стих о паре</li>
+              <li>Правка двух поздравлений родителей или свидетелей</li>
+              <li>Одна общая правка пакета</li>
+            </ul>
+            <a class="btn btn-ghost" href="#order">Заказать пакет</a>
+          </article>
+        </div>
+
+        <div class="pay-note">
+          <p>
+            <strong>Как платим.</strong> После заявки пришлю реквизиты в Telegram: карта или перевод.
+            Предоплата 50% — после неё беру текст в работу. Остаток — до сдачи файла. Отдельная
+            правка готового поздравления без пакета: 6&nbsp;000&nbsp;₽ / 200&nbsp;Br.
+            Ведущим — 20–25% за приведённую пару, страница
+            <a href="partners.html">для партнёров</a>.
+          </p>
         </div>
       </section>
 
@@ -238,8 +297,8 @@
               <span class="section-label">Заявка</span>
               <h2>Расскажите, какой текст нужен</h2>
               <p>
-                Заявка придёт мне в Telegram. Можно начать с короткой формы или сразу заполнить
-                подробный бриф — так текст получится точнее.
+                Заявка придёт мне в Telegram. Дальше — бриф (если ещё нет), предоплата 50% по
+                реквизитам в чате, затем текст за 5–10 дней.
               </p>
             </div>
             <ul class="contact-list">
@@ -278,13 +337,14 @@
                 />
               </div>
               <div class="field full">
-                <label for="service">Услуга</label>
+                <label for="service">Пакет</label>
                 <select id="service" name="service" required>
                   <option value="">Выберите…</option>
-                  <option>Церемониальная речь</option>
-                  <option>Корректировка поздравления</option>
-                  <option>Стихи о молодожёнах</option>
-                  <option>Несколько услуг / обсудим</option>
+                  <option>Стих о паре — 12 000 ₽ / 400 Br</option>
+                  <option>Церемониальная речь — 18 000 ₽ / 600 Br</option>
+                  <option>Пакет «День» — 35 000 ₽ / 1 170 Br</option>
+                  <option>Корректировка поздравления — 6 000 ₽ / 200 Br</option>
+                  <option>Обсудим пакет</option>
                 </select>
               </div>
               <div class="field full">
@@ -309,7 +369,10 @@
                 aria-hidden="true"
               />
             </div>
-            <p class="form-note">Заявка придёт мне в Telegram автоматически. Обычно отвечаю в тот же день.</p>
+            <p class="form-note">
+              Заявка придёт мне в Telegram. Реквизиты предоплаты 50% пришлю в ответ — карту в чат не
+              пишу на сайте.
+            </p>
             <button class="btn btn-solid" type="submit">Отправить заявку</button>
             <p class="form-status" id="lead-status" role="status" aria-live="polite"></p>
           </form>

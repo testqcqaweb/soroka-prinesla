@@ -604,6 +604,103 @@ a:hover {
   font-size: 0.98rem;
 }
 
+.packages {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 860px) {
+  .packages {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+}
+
+.package {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 1.25rem 1.5rem;
+  background: var(--feature-card-bg);
+  border: 1px solid var(--feature-card-border);
+  box-shadow: var(--shadow);
+  animation: rise 0.9s var(--ease) both;
+}
+
+.package:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.package:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.package-featured {
+  border-color: var(--accent);
+  background: #fff8f1;
+}
+
+.package-name {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.package h3 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin: 0 0 0.45rem;
+  line-height: 1.15;
+  color: var(--feature-title-text-color);
+}
+
+.package-price {
+  margin: 0 0 0.9rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.package-price span {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.package ul {
+  margin: 0 0 1.2rem;
+  padding: 0 0 0 1.1rem;
+  color: var(--feature-desc-color);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.package li + li {
+  margin-top: 0.35rem;
+}
+
+.package .btn {
+  align-self: flex-start;
+}
+
+.pay-note {
+  margin-top: 1.5rem;
+  padding: 1.15rem 1.25rem;
+  background: var(--feature-card-bg);
+  border: 1px solid var(--feature-card-border);
+}
+
+.pay-note p {
+  margin: 0;
+  color: var(--feature-desc-color);
+  font-size: 0.98rem;
+}
+
 .examples {
   display: grid;
   gap: 1.5rem;
@@ -1034,6 +1131,7 @@ a:hover {
   .hero-content,
   .section-head,
   .service,
+  .package,
   .form-panel,
   .page-hero {
     animation: none !important;
